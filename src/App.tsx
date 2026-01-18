@@ -1,4 +1,4 @@
-import ProfileCard from './profile';
+import ProfileCard from './PracticeCode/Day1_profile';
 
 export default function App() {
   return (
