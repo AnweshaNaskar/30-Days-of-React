@@ -1,10 +1,10 @@
 
-import ToDo from "./PracticeCode/Day6_todo";
+import TitleChanger from './PracticeCode/Day8_pageTitle';
 
 export default function App() {
   return (
     <div style={{ display: 'flex', gap: '20px', padding: '40px' }}>
-    <ToDo/>
+    <TitleChanger/>
     </div>
   );
 }
