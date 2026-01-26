@@ -1,10 +1,10 @@
 
-import TitleChanger from './PracticeCode/Day8_pageTitle';
+import UsersList from "./PracticeCode/Day9_usersList";
 
 export default function App() {
   return (
     <div style={{ display: 'flex', gap: '20px', padding: '40px' }}>
-    <TitleChanger/>
+    <UsersList />
     </div>
   );
 }
