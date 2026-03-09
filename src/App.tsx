@@ -1,13 +1,38 @@
 
-import ToDo from "./PracticeCode/Day14_TodoV2";
+import Button from "./PracticeCode/Day15_Buttons";
 
-export default function App() {
+// export default function App() {
+//   return (
+//     <div style={{ display: 'flex', gap: '20px', padding: '40px' }}>
+//     <ToDo />
+//     </div>
+//   );
+// }
+const App = () => {
+  const handleDelete = () => {
+    alert('Deleting record...');
+  };
+
+  const handleSave = () => {
+    alert('Progress saved!');
+  };
+
   return (
-    <div style={{ display: 'flex', gap: '20px', padding: '40px' }}>
-    <ToDo />
+    <div style={{ padding: '20px', display: 'flex', gap: '10px' }}>
+      {/* Primary variant */}
+      <Button variant="primary" onClick={handleSave}>
+        Save Changes
+      </Button>
+
+      {/* Danger variant */}
+      <Button variant="danger" onClick={handleDelete}>
+        Delete Account
+      </Button>
     </div>
   );
-}
+};
+
+export default App;
 
 // import React, { useState } from 'react';
 // import UserSearch from "./PracticeCode/Day12_searchFilteUpdated";
