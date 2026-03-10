@@ -1,5 +1,6 @@
-
 import Button from "./PracticeCode/Day15_Buttons";
+import CustomInput from "./PracticeCode/Day16_useRef";
+import { useRef } from "react";
 
 // export default function App() {
 //   return (
@@ -10,20 +11,30 @@ import Button from "./PracticeCode/Day15_Buttons";
 // }
 const App = () => {
   const handleDelete = () => {
-    alert('Deleting record...');
+    alert("Deleting record...");
   };
 
   const handleSave = () => {
-    alert('Progress saved!');
+    alert("Progress saved!");
+  };
+  // 1. Create the reference point
+  const inputRef = useRef(null);
+
+  const handleFocus = () => {
+    // 2. Access the '.current' property to trigger the focus
+    inputRef.current.focus();
   };
 
   return (
-    <div style={{ padding: '20px', display: 'flex', gap: '10px' }}>
+    <div style={{ padding: "20px", display: "flex", gap: "10px" }}>
       {/* Primary variant */}
       <Button variant="primary" onClick={handleSave}>
         Save Changes
       </Button>
-
+      <CustomInput ref={inputRef} />
+      <Button variant="primary" onClick={handleFocus}>
+        Focus the Input
+      </Button>
       {/* Danger variant */}
       <Button variant="danger" onClick={handleDelete}>
         Delete Account
@@ -57,9 +68,9 @@ export default App;
 //   return (
 //     <div style={{ padding: '40px' }}>
 //       {/* Pass the state and the updater function as props */}
-//       <UserSearch 
-//         searchTerm={searchTerm} 
-//         onSearchChange={setSearchTerm} 
+//       <UserSearch
+//         searchTerm={searchTerm}
+//         onSearchChange={setSearchTerm}
 //         results={filteredUsers}
 //       />
 //     </div>
