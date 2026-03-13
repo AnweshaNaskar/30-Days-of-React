@@ -1,6 +1,7 @@
-import Button from "./PracticeCode/Day15_Buttons";
-import CustomInput from "./PracticeCode/Day16_useRef";
-import { useRef } from "react";
+// import Button from "./PracticeCode/Day15_Buttons";
+// import CustomInput from "./PracticeCode/Day16_useRef";
+// import { useRef } from "react";
+
 
 // export default function App() {
 //   return (
@@ -9,41 +10,41 @@ import { useRef } from "react";
 //     </div>
 //   );
 // }
-const App = () => {
-  const handleDelete = () => {
-    alert("Deleting record...");
-  };
+// const App = () => {
+//   // const handleDelete = () => {
+//   //   alert("Deleting record...");
+//   // };
 
-  const handleSave = () => {
-    alert("Progress saved!");
-  };
-  // 1. Create the reference point
-  const inputRef = useRef(null);
+//   // const handleSave = () => {
+//   //   alert("Progress saved!");
+//   // };
+//   // // 1. Create the reference point
+//   // const inputRef = useRef(null);
 
-  const handleFocus = () => {
-    // 2. Access the '.current' property to trigger the focus
-    inputRef.current.focus();
-  };
+//   // const handleFocus = () => {
+//   //   // 2. Access the '.current' property to trigger the focus
+//   //   inputRef.current.focus();
+//   // };
 
-  return (
-    <div style={{ padding: "20px", display: "flex", gap: "10px" }}>
-      {/* Primary variant */}
-      <Button variant="primary" onClick={handleSave}>
-        Save Changes
-      </Button>
-      <CustomInput ref={inputRef} />
-      <Button variant="primary" onClick={handleFocus}>
-        Focus the Input
-      </Button>
-      {/* Danger variant */}
-      <Button variant="danger" onClick={handleDelete}>
-        Delete Account
-      </Button>
-    </div>
-  );
-};
+//   // return (
+//   //   <div style={{ padding: "20px", display: "flex", gap: "10px" }}>
+//   //     {/* Primary variant */}
+//   //     <Button variant="primary" onClick={handleSave}>
+//   //       Save Changes
+//   //     </Button>
+//   //     <CustomInput ref={inputRef} />
+//   //     <Button variant="primary" onClick={handleFocus}>
+//   //       Focus the Input
+//   //     </Button>
+//   //     {/* Danger variant */}
+//   //     <Button variant="danger" onClick={handleDelete}>
+//   //       Delete Account
+//   //     </Button>
+//   //   </div>
+//   // );
+// };
 
-export default App;
+// export default App;
 
 // import React, { useState } from 'react';
 // import UserSearch from "./PracticeCode/Day12_searchFilteUpdated";
@@ -76,3 +77,28 @@ export default App;
 //     </div>
 //   );
 // }
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// @ts-ignore
+import Home from './PracticeCode/Day17_ReactRouter/Pages/Home';
+// @ts-ignore
+import About from './PracticeCode/Day17_ReactRouter/Pages/About';
+// @ts-ignore
+import Contact from './PracticeCode/Day17_ReactRouter/Pages/Contact';
+// @ts-ignore
+import Navbar from './PracticeCode/Day17_ReactRouter/Components/Navbar';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Navbar /> {/* This stays visible on every page */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
