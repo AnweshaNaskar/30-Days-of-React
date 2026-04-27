@@ -78,26 +78,50 @@
 //   );
 // }
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// @ts-ignore
-import Home from './PracticeCode/Day17_ReactRouter/Pages/Home';
-// @ts-ignore
-import About from './PracticeCode/Day17_ReactRouter/Pages/About';
-// @ts-ignore
-import Contact from './PracticeCode/Day17_ReactRouter/Pages/Contact';
-// @ts-ignore
-import Navbar from './PracticeCode/Day17_ReactRouter/Components/Navbar';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// // @ts-ignore
+// import Home from './PracticeCode/Day17_ReactRouter/Pages/Home';
+// // @ts-ignore
+// import About from './PracticeCode/Day17_ReactRouter/Pages/About';
+// // @ts-ignore
+// import Contact from './PracticeCode/Day17_ReactRouter/Pages/Contact';
+// // @ts-ignore
+// import Navbar from './PracticeCode/Day17_ReactRouter/Components/Navbar';
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Navbar /> {/* This stays visible on every page */}
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/contact" element={<Contact />} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
+
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import UserDetails from './PracticeCode/Day18_api';
+import { ThemeProvider } from './PracticeCode/Day 19/ThemeContext';
+import Content from './PracticeCode/Day 19/Day19_darkmode';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar /> {/* This stays visible on every page */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <Routes>
+    //     {/* The :id is a dynamic segment */}
+    //     <Route path="/users/:id" element={<UserDetails />} />
+    //   </Routes>
+    // </BrowserRouter>
+    <ThemeProvider>
+      <div className="app-container">
+        <h1>React Context API</h1>
+        <Content />
+      </div>
+    </ThemeProvider>
   );
 }
 
