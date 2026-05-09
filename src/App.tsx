@@ -106,22 +106,16 @@
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import UserDetails from './PracticeCode/Day18_api';
 import { ThemeProvider } from './PracticeCode/Day 19/ThemeContext';
-import Content from './PracticeCode/Day 19/Day19_darkmode';
+import { ProductList } from './PracticeCode/Day 20/Day20_useFetch';
 
 function App() {
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //     {/* The :id is a dynamic segment */}
-    //     <Route path="/users/:id" element={<UserDetails />} />
-    //   </Routes>
-    // </BrowserRouter>
-    <ThemeProvider>
-      <div className="app-container">
-        <h1>React Context API</h1>
-        <Content />
-      </div>
-    </ThemeProvider>
+    <div className="App">
+      <h1>My Store</h1>
+      <hr />
+      {/* Rendering the component that uses the hook */}
+      <ProductList />
+    </div>
   );
 }
 
