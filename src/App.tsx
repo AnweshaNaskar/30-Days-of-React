@@ -107,6 +107,7 @@
 // import UserDetails from './PracticeCode/Day18_api';
 import { ThemeProvider } from './PracticeCode/Day 19/ThemeContext';
 import { ProductList } from './PracticeCode/Day 20/Day20_useFetch';
+import AdminDashboard from './PracticeCode/Day21/Day21_Dashboard';
 
 function App() {
   return (
@@ -114,7 +115,7 @@ function App() {
       <h1>My Store</h1>
       <hr />
       {/* Rendering the component that uses the hook */}
-      <ProductList />
+      <AdminDashboard />
     </div>
   );
 }
